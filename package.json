@@ -2,6 +2,7 @@
     "name": "fuse-react-app",
     "version": "8.2.1",
     "private": true,
+    "homepage": "https://jamessnader4444.github.io",
     "dependencies": {
         "@emotion/cache": "11.9.3",
         "@emotion/react": "11.9.3",
