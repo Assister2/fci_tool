@@ -518,13 +518,13 @@ function DailyPlanner() {
           <div className="page-content-wrap">
             <div className="row">
               <br />
-              
+              <hr />
               <CardContent
                 sx={{
                   padding: "30px",
                 }}
               >
-<hr />
+
                 {/* <label> */}
                 {/* <strong style={{ fontSize: "20px", marginLeft: "90px", color: "#9d0921" }}> */}
                 {/* <Box className="inputRow"> */}
@@ -1087,8 +1087,8 @@ function DailyPlanner() {
                         {/* <i className="fa fa-file-excel-o" aria-hidden="true"></i>{" "} */}
                         <i className="fa fa-list-alt" aria-hidden="true"></i> Optimal Plan
                       </Typography>
-                    </Box>
-                    <div className="wrap__toggle" style={{ textAlign: 'center', borderStyle: 'solid', borderColor: '#ebab44b0' }} onClick={handleSolve}>
+                   <br/>
+                    <div className="wrap__toggle" style={{ textAlign: 'center', borderStyle: 'solid', borderColor: '#ebab44b0', marginLeft: '1px' }} onClick={handleSolve}>
                       <div className="wrap__toggle--bluetooth">
                         <span style={{ textAlign: 'center', fontWeight: 'bold' }}>Generate Optimized Plan</span>
                       </div>
@@ -1103,6 +1103,7 @@ function DailyPlanner() {
                       />
                       
                     </div>
+                    </Box>
                     <br />
                     {/* <div>
               <br/>
