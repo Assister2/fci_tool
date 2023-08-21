@@ -405,7 +405,7 @@ function MonthlyPlan() {
             // backgroundSize: 'cover',
             // backgroundPosition: 'center',
             //padding: 40
-            backgroundColor: "lightgray"
+            backgroundColor: "#c2ddf9"
          }}
         >
           <Paper elevation={3} className="w-full h-full my-6">

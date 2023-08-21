@@ -461,7 +461,7 @@ function DailyPlanner() {
             // backgroundImage: "url('/assets/images/fci/bg8.jpg') ",
             // backgroundSize: 'cover',
             // backgroundPosition: 'center',
-            backgroundColor: "lightgray"
+            backgroundColor: "#c2ddf9"
          }}
         >
           <Paper elevation={3} className="w-full h-full my-6">
