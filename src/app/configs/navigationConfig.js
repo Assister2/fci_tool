@@ -14,7 +14,7 @@ const navigationConfig = [
     translate: 'HOME',
     type: 'item',
     icon: 'heroicons-outline:home',
-    url: '/home',
+    url: '/dashboards/analytics',
   },
   {
     id: 'monthly_plan',

@@ -451,9 +451,10 @@ function DailyPlanner() {
       <div className="page-container" style={{ backgroundColor: "#ebab44b0" }}>
         <div
           className="page-content"
-          style={{ backgroundImage: "url('/assets/images/fci/bg8.jpg') ",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+          style={{ 
+            // backgroundImage: "url('/assets/images/fci/bg8.jpg') ",
+            // backgroundSize: 'cover',
+            // backgroundPosition: 'center',
             padding: 40
          }}
         >
@@ -527,6 +528,7 @@ function DailyPlanner() {
                     <Select
                       value={Scenerio != "" ? Scenerio : "Scenerio 1"}
                       defaultValue="Scenerio 1"
+                      style={{width:200}}
                       onChange={handleSelectChange}
                     //  style={{ marginLeft: "600px" }}
                     >
@@ -567,7 +569,7 @@ function DailyPlanner() {
                                 <span
                                   className="input-group-addon"
                                   style={{
-                                    backgroundColor: "rgba(235, 171, 68, 0.69)",
+                                    //backgroundColor: "rgba(235, 171, 68, 0.69)",
 
                                   }}
                                 >
@@ -589,7 +591,7 @@ function DailyPlanner() {
                                   required=""
                                   hidden
                                 />
-                                  <Button variant="contained" component="span">
+                                  <Button variant="contained" component="span" style={{margin:25}}>
                                     Choose File...
                                   </Button>
                                   <p>Selected File: {selectedFileName ? selectedFileName : "No File Selected."}</p>
@@ -609,6 +611,7 @@ function DailyPlanner() {
                                     src="/assets/images/fci/upload1.jpg"
                                     id="uploadConfig"
                                     onClick={handleUploadConfig}
+                                    style={{margin:25}}
                                     disabled={!fileSelected}>
                                     Upload
                                   </Button>
@@ -620,6 +623,7 @@ function DailyPlanner() {
                                     src="/assets/images/fci/upload1.jpg"
                                     id="uploadConfig1"
                                     onClick={handleUploadConfig}
+                                    style={{margin:25}}
                                     disabled={!fileSelected}>
                                     Upload
                                   </Button>
@@ -900,7 +904,7 @@ function DailyPlanner() {
                           </div>
                           <div className="col-md-3">
                             <Select
-                              style={{ width: "150px", padding: "5px" }}
+                              style={{ width: "250px", margin:20, padding: "5px" }}
                               id="origin_state"
                               onChange={handleDropdownChange}
                               value={selectedOption}
@@ -941,11 +945,7 @@ function DailyPlanner() {
 
                             <Select
                               id="origin_railhead"
-                              style={{
-                                width: "150px",
-                                //  padding: "5px" ,
-                                //  marginLeft:"30px"
-                              }}
+                              style={{ width: "250px", margin:20, padding: "5px" }}
                               onChange={handleSubDropdownChange1}
                               value={subOption1}
                             >
@@ -969,7 +969,8 @@ function DailyPlanner() {
                           {/* </strong> */}
                           <div className="col-md-3">
                             <Select
-                              style={{ width: "150px", padding: "5px" }}
+                            
+                            style={{ width: "250px", margin:20, padding: "5px" }}
                               id="deficit_state"
                               onChange={handleDropdownChange2}
                               value={selectedOption2}
@@ -1008,7 +1009,7 @@ function DailyPlanner() {
                           <div className="col-md-2">
                             <Select
                               id="deficit_railhead"
-                              style={{ width: "150px", padding: "5px" }}
+                              style={{ width: "250px", margin:20, padding: "5px" }}
                               onChange={handleSubDropdownChange2}
                               value={subOption2}
                             >

@@ -393,9 +393,10 @@ function MonthlyPlan() {
       >
         <div
           className="page-content view-container body"
-          style={{ backgroundImage: "url('/assets/images/fci/bg8.jpg')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+          style={{ 
+            // backgroundImage: "url('/assets/images/fci/bg8.jpg')",
+            // backgroundSize: 'cover',
+            // backgroundPosition: 'center',
             padding: 40
          }}
         >
@@ -522,7 +523,7 @@ function MonthlyPlan() {
                                     required=""
                                     hidden
                                   />
-                                  <Button variant="contained" component="span">
+                                  <Button variant="contained" component="span" style={{margin:25}}>
                                     Choose File...
                                   </Button>
                                   <p>Selected File: {selectedFileName ? selectedFileName : "No File Selected."}</p>
@@ -547,6 +548,7 @@ function MonthlyPlan() {
                                 src="/assets/images/fci/upload1.jpg"
                                 id="uploadConfig"
                                 onClick={handleUploadConfig}
+                                style={{margin:25}}
                                 disabled={!fileSelected}>
                                 Upload
                               </Button>
@@ -674,6 +676,7 @@ function MonthlyPlan() {
                                 required
                                 id="r_s-required"
                                 label="Required"
+                                style={{marginLeft: "250px",marginTop:"30px"}}
                                 value={r_s}
                                 onChange={(e) => setr_s(e.target.value)}
                                 defaultValue="25"
@@ -704,6 +707,7 @@ function MonthlyPlan() {
                                 required
                                 id="r_d-required"
                                 label="Required"
+                                style={{marginLeft: "250px",marginTop:"30px"}}
                                 value={r_d}
                                 onChange={(e) => setr_d(e.target.value)}
                                 defaultValue="25"
