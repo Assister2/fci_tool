@@ -1144,8 +1144,16 @@ function MonthlyPlan() {
                     <div className="form-group">
                       {solutionSolved && (
                         <div>
-                          <Box className="inputRow" style={{ display: "inline", marginLeft: "80px" }}>
-                            <center><a
+                          <Box className="inputRow justify-center" style={{ display: "inline", marginLeft: "80px" }}>
+                            <Button
+                              style={{ color: "white", marginLeft: "15px" , backgroundColor: "darkcyan"}}
+                              className="btn btn-danger dropdown-toggle"
+                              onClick={() => exportToExcel2()}
+                            >
+                              <i className="fa fa-bars"></i> Download Railhead To Railhead Detailed Plan
+                            </Button>
+
+                            {/* <center><a
                               href="#"
                               style={{ 
                                 marginLeft: "100px" ,
@@ -1160,9 +1168,9 @@ function MonthlyPlan() {
                                 exportToExcel2();
                               }}
                             >
-                              {/* <i className="fa fa-bars"></i> */}
+                              {/* <i className="fa fa-bars"></i> }
                               Download Railhead To Railhead Detailed Plan
-                            </a></center>
+                            </a></center> */}
                             {/* <button
                             style={{ color: "white", marginLeft: "100px" }}
                             className="btn btn-success dropdown-toggle"
@@ -1173,7 +1181,7 @@ function MonthlyPlan() {
                           </button> */}
                           </Box>
                           <br />
-                          <Box className="inputRow" style={{ display: "inline", marginTop: "30px" }}>
+                          <Box className="inputRow justify-center" style={{ display: "inline", marginTop: "60px" , marginLeft: "100px" }}>
                             {/* <button
                               style={{ color: "white", marginLeft: "100px" }}
                               className="btn btn-success dropdown-toggle"
@@ -1182,7 +1190,7 @@ function MonthlyPlan() {
                             {/* <i className="fa fa-bars"></i> */}
 
                             {/* </button> */}
-                            <center><a
+                            {/* <center><a
                               href="#"
                               style={{ 
                                 marginLeft: "100px" ,
@@ -1198,7 +1206,16 @@ function MonthlyPlan() {
                               }}
                             >
                               Download State to State Detailed Plan
-                            </a></center>
+                            </a></center> */}
+
+                            <Button
+                              style={{ color: "white", marginLeft: "15px" , marginTop:"15px", backgroundColor: "darkcyan"}}
+                              className="btn btn-danger dropdown-toggle"
+                              onClick={() => exportToExcel1()}
+                            >
+                              <i className="fa fa-bars"></i> Download State to State Detailed Plan
+                            </Button>
+
                           </Box>
                         </div>
                       )}

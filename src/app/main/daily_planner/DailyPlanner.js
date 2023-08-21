@@ -1110,30 +1110,30 @@ function DailyPlanner() {
                   </div> */}
                     <br />
                     {solutionSolved && (
-                      <div>
+                      <Box className="inputRow justify-center" style={{ display: "inline", marginTop: "60px" , marginLeft: "100px" }}>
                         {scn && (
                           <div>
-                            <Button
-                              style={{ color: "lightblue", marginLeft: "15px", backgroundColor: "darkcyan"}}
+                            <center><Button
+                              style={{ color: "white", backgroundColor: "darkcyan"}}
                               className="btn btn-danger dropdown-toggle"
                               onClick={() => exportToExcel2()}
                             >
                               <i className="fa fa-bars"></i> Download Railhead-Railhead
                               Detailed Plan
-                            </Button>
+                            </Button></center>
                           </div>)}
                         {!scn && (
                           <div>
-                            <Button
-                              style={{ color: "lightblue", marginLeft: "15px" , backgroundColor: "darkcyan"}}
+                            <center><Button
+                              style={{ color: "white", backgroundColor: "darkcyan"}}
                               className="btn btn-danger dropdown-toggle"
                               onClick={() => exportToExcel1()}
                             >
                               <i className="fa fa-bars"></i> Download Railhead-Railhead
                               Detailed Plan
-                            </Button>
+                            </Button></center>
                           </div>)}
-                      </div>
+                      </Box>
                     )}
                     <br />
                     <br />
