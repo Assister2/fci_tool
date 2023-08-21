@@ -18,6 +18,7 @@ import {
   RadioGroup,
   Radio,
   TextField,
+  Switch,
 } from "@mui/material";
 
 function MonthlyPlan() {
@@ -1101,43 +1102,21 @@ function MonthlyPlan() {
                     </div>
                   </div> */}
                       <Box className="inputRow">
-                        <div className="form-group col-md-12">
-                          {/* <div className="wrap__toggle--bluetooth col-md-2">  */}
-                          <div className="col-md-2">
-                            {/* <div className="col-md-2 wrap__toggle--bluetooth"> */}
-                            {/* <span style={{ textAlign: "center", fontWeight: "bold" }}> */}
-                            {/* <span 
-                           className="help-block " 
-                            style={{ color: "black" }}> */}
-                            Generate Optimized Plan
-                            {/* </span> */}
-                          </div>
-                          <div
-                            className="wrap__toggle1 col-md-1"
-                            // //  className="col-md-2"
-                            style={{
-                              textAlign: "center",
-                              borderStyle: "solid",
-                              borderColor: "#ebab44b0",
-                            }}
-                            onClick={handleSolve}
-                          >
-                            {/* <span className="help-block " style={{ color: "black" }}> */}
-
-                            <div className="wrap__toggle--toggler">
-                              <label htmlFor="toggle">
-                                <input
-                                  type="radio"
-                                  className="checkBox"
-                                  id="toggle"
-                                  onClick={handleSolve}
-                                />
-                                <span></span>
-                              </label>
-                            </div>
-                            {/* </span> */}
-                          </div>
-                        </div>
+                        <div className="wrap__toggle" style={{ textAlign: 'center', borderStyle: 'solid', borderColor: '#ebab44b0' }} onClick={handleSolve}>
+                      <div className="wrap__toggle--bluetooth">
+                        <span style={{ textAlign: 'center', fontWeight: 'bold' }}>Generate Optimized Plan</span>
+                      </div>
+                      {/* <div className="wrap__toggle--toggler">
+                        <label htmlFor="toggle">
+                        </label>
+                      </div> */}
+                      <Switch
+                        id="toggle"
+                        onChange={handleSolve}
+                        inputProps={{ 'aria-label': 'controlled' }}
+                      />
+                      
+                    </div>
                         {/* </div> */}
                       </Box>
                     </div>

@@ -909,10 +909,10 @@ function DailyPlanner() {
                       {/* <Box> */}
                       <div className="form-group">
                         <div className="col-md-12 flex">
-                          <div className="col-md-3" style={{width: 200}}>
+                          <div className="col-md-3" style={{width: 100, marginTop:15}}>
                             Select Origin State
                           </div>
-                          <div className="col-md-3">
+                          <div className="col-md-3" style={{width: 200, marginTop:-15}}>
                             <Select
                               style={{ width: "250px", margin:20, padding: "5px" }}
                               id="origin_state"
@@ -944,14 +944,10 @@ function DailyPlanner() {
                             </Select>
                           </div>
                           <div className="col-md-3"
-                            style={{
-                              //   width: "100px",
-                              //  padding: "5px" ,
-                              // marginLeft: "20px"
-                            }}>
+                            style={{width: 100, marginTop:15, marginLeft:100}}>
                             Select Origin Railhead
                           </div>
-                          <div className="col-md-3">
+                          <div className="col-md-3" style={{width: 200, marginTop:-15}}>
 
                             <Select
                               id="origin_railhead"
@@ -975,12 +971,12 @@ function DailyPlanner() {
 
                           {/* <label htmlFor="deficit_state"> */}
                           {/* <strong style={{ fontSize: "16px", padding: "5px" }}> */}
-                          <div className="col-md-3"> Select Destination State</div>
+                          <div className="col-md-3" style={{width: 100, marginTop:15}}> Select Destination State</div>
                           {/* </strong> */}
-                          <div className="col-md-3">
+                          <div className="col-md-3" style={{width: 200, marginTop:-15}}>
                             <Select
                             
-                            style={{ width: "200px", margin:20, padding: "5px" }}
+                            style={{ width: "250px", margin:20, padding: "5px" }}
                               id="deficit_state"
                               onChange={handleDropdownChange2}
                               value={selectedOption2}
@@ -1011,12 +1007,12 @@ function DailyPlanner() {
                               <MenuItem value="West Bengal">West Bengal</MenuItem>
                             </Select>
                           </div>
-                          <div className="col-md-3">
+                          <div className="col-md-3" style={{width: 100, marginTop:15, marginLeft:100}}>
                             {/* <strong style={{ fontSize: "16px", padding: "5px" }}> */}
                             Select Destination Railhead
                             {/* </strong> */}
                           </div>
-                          <div className="col-md-2">
+                          <div className="col-md-2" style={{width: 200, marginTop:-15}}>
                             <Select
                               id="deficit_railhead"
                               style={{ width: "250px", margin:20, padding: "5px" }}
@@ -1030,7 +1026,7 @@ function DailyPlanner() {
                               ))}
                             </Select>
                           </div>
-                          <div className="col-md-1">
+                          <div className="col-md-1" style={{ marginLeft:100 , martinTop:20}}>
                             <Button
                               style={{
                                 padding: "5px",
@@ -1086,7 +1082,12 @@ function DailyPlanner() {
                   Generate Optimized Plan
                 </button> */}
                     <hr />
-                    <div style={{ fontSize: '20px', fontWeight: '700' , margin:25}}><i className="fa fa-list-alt" aria-hidden="true"></i> Optimal Plan</div>
+                    <Box>
+                      <Typography fontWeight="250" variant="h4">
+                        {/* <i className="fa fa-file-excel-o" aria-hidden="true"></i>{" "} */}
+                        <i className="fa fa-list-alt" aria-hidden="true"></i> Optimal Plan
+                      </Typography>
+                    </Box>
                     <div className="wrap__toggle" style={{ textAlign: 'center', borderStyle: 'solid', borderColor: '#ebab44b0' }} onClick={handleSolve}>
                       <div className="wrap__toggle--bluetooth">
                         <span style={{ textAlign: 'center', fontWeight: 'bold' }}>Generate Optimized Plan</span>
