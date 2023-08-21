@@ -398,7 +398,7 @@ function MonthlyPlan() {
             // backgroundImage: "url('/assets/images/fci/bg8.jpg')",
             // backgroundSize: 'cover',
             // backgroundPosition: 'center',
-            padding: 40
+            padding: 20
          }}
         >
           <ul
@@ -416,7 +416,7 @@ function MonthlyPlan() {
                 display: "flex",
                 alignItems: "center",
                 // justifyContent: "center",
-                width: "90%",
+                width: "50%",
               }}
             >
               <Box>
@@ -460,13 +460,15 @@ function MonthlyPlan() {
             </ul> */}
             {/* </Typography> */}
           </Box>
+          <br/>
+          <hr/>
           <CardContent
             sx={{
               padding: "30px",
             }}
           >
 
-<hr />
+
             <div className="page-content-wrap app-container ">
               <div className="row">
                 <div className="col-md-12">
@@ -579,9 +581,9 @@ function MonthlyPlan() {
                     </Box>
                     </form>
                   </div>
-                  <br />
+                  {/* <br /> */}
                   <hr />
-                  <br />
+                  {/* <br /> */}
                   <div className=" form-group col-md-12"
                   //  style={{ marginLeft: "15px" }}
                   >
@@ -632,12 +634,13 @@ function MonthlyPlan() {
 
                       <br />
                       {/*   <br /> */}
-<hr />
+{/* <hr /> */}
                       <div className="form-group">
                         <div className="form-group">
                           <Box className="inputRow">
                             <div className="col-md-8">
-                              <p style={{ margin: 0, padding: 0 }}>
+                              <p>
+                              {/* <p style={{ margin: 0, padding: 0 }}> */}
                                 {/* <strong
                                 style={{
                                   //  color: "crimson",
@@ -648,7 +651,7 @@ function MonthlyPlan() {
                               > */}
                               
                                 <span
-                                  className="help-block"
+                                className="help-block"
 
                                   style={{ color: "black", margin: "20px" }}>
                                   For Maximum Number of Rakes:
@@ -727,7 +730,8 @@ function MonthlyPlan() {
                       </div>
                       {/* </Box> */}
                       <br />
-                      <br />
+                      <hr/>
+                      {/* <br /> */}
 
                       {/* <p style={{ margin: 0, padding: 0 }}>
                     <strong
@@ -1016,6 +1020,7 @@ function MonthlyPlan() {
                           Optimal Plan
                         </Typography>
                       </Box>
+                   
                       {/* <div style={{ fontSize: "20px", fontWeight: "700" }}>
                       <i className="fa fa-list-alt" aria-hidden="true"></i> Optimal
                       Plan
@@ -1101,10 +1106,10 @@ function MonthlyPlan() {
                       </label>
                     </div>
                   </div> */}
-                      <Box className="inputRow">
-                        <div className="wrap__toggle" style={{ textAlign: 'center', borderStyle: 'solid', borderColor: '#ebab44b0' }} onClick={handleSolve}>
-                      <div className="wrap__toggle--bluetooth">
-                        <span style={{ textAlign: 'center', fontWeight: 'bold' }}>Generate Optimized Plan</span>
+                      <Box className="inputRow" style={{ display: 'flex', justifyContent: 'flex-start'}}>
+                        <div className="wrap__toggle" style={{ textAlign: 'center', borderStyle: 'solid', borderColor: '#ebab44b0', marginLeft: '1px' }} onClick={handleSolve}>
+                      <div className="wrap__toggle--bluetooth" >
+                        <span style={{ textAlign: 'center', fontWeight: 'bold'}}>Generate Optimized Plan</span>
                       </div>
                       {/* <div className="wrap__toggle--toggler">
                         <label htmlFor="toggle">
