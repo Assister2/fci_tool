@@ -18,6 +18,7 @@ import {
   MenuItem,
   Button,
   Select,
+  Switch,
 } from "@mui/material";
 
 function DailyPlanner() {
@@ -173,8 +174,10 @@ function DailyPlanner() {
 
       if (response.ok) {
         // buttonRef.current.innerText = "Solved";
+        document.getElementById('toggle').checked = false;
         alert("Solution Done!, Now you can download results");
         setSolutionSolved(true);
+        
       } else {
         console.error("Failed to send inputs. Status code:", response.status);
       }
@@ -448,7 +451,9 @@ function DailyPlanner() {
         p: 0,
       }}
     >
-      <div className="page-container" style={{ backgroundColor: "#ebab44b0" }}>
+    
+      <div className="page-container">
+      
         <div
           className="page-content"
           style={{ 
@@ -483,7 +488,9 @@ function DailyPlanner() {
                 <Typography fontWeight="300" variant="h4">
                   Optimized Daily Plan
                 </Typography>
+                
               </Box>
+              
               <a className="x-navigation-control"></a>
             </li>
           </ul>
@@ -494,6 +501,7 @@ function DailyPlanner() {
           </li>
           <li className="active">Daily plan</li>
         </ul> */}
+        
           <Box>
             {/* <Typography
               fontWeight="50"
@@ -510,17 +518,18 @@ function DailyPlanner() {
           <div className="page-content-wrap">
             <div className="row">
               <br />
+              
               <CardContent
                 sx={{
                   padding: "30px",
                 }}
               >
-
+<hr />
                 {/* <label> */}
                 {/* <strong style={{ fontSize: "20px", marginLeft: "90px", color: "#9d0921" }}> */}
                 {/* <Box className="inputRow"> */}
                 <div className=" form-group col-md-12">
-                  <div className=" col-md-2">
+                  <div className="col-md-2" style={{margin:10}}>
                     Select Scenario
                   </div>
                   <div className=" col-md-2">
@@ -528,7 +537,7 @@ function DailyPlanner() {
                     <Select
                       value={Scenerio != "" ? Scenerio : "Scenerio 1"}
                       defaultValue="Scenerio 1"
-                      style={{width:200}}
+                      style={{width:200 , margin:15}}
                       onChange={handleSelectChange}
                     //  style={{ marginLeft: "600px" }}
                     >
@@ -536,7 +545,7 @@ function DailyPlanner() {
                       <MenuItem value="Scenerio 2">Scenario 2</MenuItem>
                     </Select>
                   </div>
-                </div>
+                </div><hr/>
 
                 {/* </label> */}
                 {/* </Box> */}
@@ -647,6 +656,7 @@ function DailyPlanner() {
                     </Box> */}
                   </div>
                   <br />
+                  <hr />
                   <br />
                   <div style={{ marginLeft: "15px" }}>
                     {/* <div style={{ fontSize: '20px', fontWeight: '700' }}><i className="fa fa-info-circle" aria-hidden="true"></i> Configurations</div> */}
@@ -898,8 +908,8 @@ function DailyPlanner() {
 
                       {/* <Box> */}
                       <div className="form-group">
-                        <div className="col-md-12">
-                          <div className="col-md-3">
+                        <div className="col-md-12 flex">
+                          <div className="col-md-3" style={{width: 200}}>
                             Select Origin State
                           </div>
                           <div className="col-md-3">
@@ -961,7 +971,7 @@ function DailyPlanner() {
 
                       <br />
                       <div className="form-group">
-                        <div className="col-md-12">
+                        <div className="col-md-12 flex">
 
                           {/* <label htmlFor="deficit_state"> */}
                           {/* <strong style={{ fontSize: "16px", padding: "5px" }}> */}
@@ -970,7 +980,7 @@ function DailyPlanner() {
                           <div className="col-md-3">
                             <Select
                             
-                            style={{ width: "250px", margin:20, padding: "5px" }}
+                            style={{ width: "200px", margin:20, padding: "5px" }}
                               id="deficit_state"
                               onChange={handleDropdownChange2}
                               value={selectedOption2}
@@ -1075,18 +1085,22 @@ function DailyPlanner() {
                 >
                   Generate Optimized Plan
                 </button> */}
-
-                    <div style={{ fontSize: '20px', fontWeight: '700' }}><i className="fa fa-list-alt" aria-hidden="true"></i> Optimal Plan</div>
+                    <hr />
+                    <div style={{ fontSize: '20px', fontWeight: '700' , margin:25}}><i className="fa fa-list-alt" aria-hidden="true"></i> Optimal Plan</div>
                     <div className="wrap__toggle" style={{ textAlign: 'center', borderStyle: 'solid', borderColor: '#ebab44b0' }} onClick={handleSolve}>
                       <div className="wrap__toggle--bluetooth">
                         <span style={{ textAlign: 'center', fontWeight: 'bold' }}>Generate Optimized Plan</span>
                       </div>
-                      <div className="wrap__toggle--toggler">
+                      {/* <div className="wrap__toggle--toggler">
                         <label htmlFor="toggle">
-                          <input type="checkbox" className="checkBox" id="toggle" onClick={handleSolve} />
-                          <span></span>
                         </label>
-                      </div>
+                      </div> */}
+                      <Switch
+                        id="toggle"
+                        onChange={handleSolve}
+                        inputProps={{ 'aria-label': 'controlled' }}
+                      />
+                      
                     </div>
                     <br />
                     {/* <div>

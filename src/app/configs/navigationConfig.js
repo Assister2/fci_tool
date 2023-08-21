@@ -11,7 +11,6 @@ const navigationConfig = [
   {
     id: 'home',
     title: 'Home',
-    translate: 'HOME',
     type: 'item',
     icon: 'heroicons-outline:home',
     url: '/dashboards/analytics',
@@ -19,7 +18,6 @@ const navigationConfig = [
   {
     id: 'monthly_plan',
     title: 'Monthly Plan',
-    translate: 'MONTHLY_PLAN',
     type: 'item',
     icon: 'material-outline:edit_calendar',
     url: '/monthly_plan',
@@ -27,7 +25,6 @@ const navigationConfig = [
   {
     id: 'daily_planner',
     title: 'Daily Planner',
-    translate: 'DAILY_PLANNER',
     type: 'item',
     icon: 'material-outline:today',
     url: '/daily_planner',

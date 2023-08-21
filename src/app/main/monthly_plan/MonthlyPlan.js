@@ -465,11 +465,12 @@ function MonthlyPlan() {
             }}
           >
 
-
+<hr />
             <div className="page-content-wrap app-container ">
               <div className="row">
                 <div className="col-md-12">
                   <br />
+                  
                   <div className="row" style={{ marginLeft: "15px" }}>
                     <div style={{ fontSize: "20px", fontWeight: "700" }}>
                       <Box>
@@ -578,6 +579,7 @@ function MonthlyPlan() {
                     </form>
                   </div>
                   <br />
+                  <hr />
                   <br />
                   <div className=" form-group col-md-12"
                   //  style={{ marginLeft: "15px" }}
@@ -586,7 +588,7 @@ function MonthlyPlan() {
                     <i className="fa fa-info-circle" aria-hidden="true"></i>{" "}
                     Configurations
                   </div> */}
-                    <Box>
+                    <Box  style={{marginLeft:25}}>
                       <Typography fontWeight="250" variant="h4">
                         {/* <i className="fa fa-file-excel-o" aria-hidden="true"></i>{" "} */}
                         Configurations
@@ -611,7 +613,7 @@ function MonthlyPlan() {
 
                             {/* </strong> */}
                           </div>
-                          <FormControl>
+                          <FormControl  style={{marginLeft:25}}>
                             <FormLabel id="demo-radio-buttons-group-label">Select Matrix System</FormLabel>
                             <RadioGroup
                               aria-labelledby="demo-radio-buttons-group-label"
@@ -629,7 +631,7 @@ function MonthlyPlan() {
 
                       <br />
                       {/*   <br /> */}
-
+<hr />
                       <div className="form-group">
                         <div className="form-group">
                           <Box className="inputRow">
@@ -643,10 +645,11 @@ function MonthlyPlan() {
                                   fontFamily: "Segoe UI",
                                 }}
                               > */}
+                              
                                 <span
                                   className="help-block"
 
-                                  style={{ color: "black", marginLeft: "20px" }}>
+                                  style={{ color: "black", margin: "20px" }}>
                                   For Maximum Number of Rakes:
                                 </span>
                                 {/* </strong> */}
@@ -1004,6 +1007,7 @@ function MonthlyPlan() {
                 >
                   Generate Optimized Plan
                 </button> */}
+                
                     <div className="form-group">
                       <Box>
                         <Typography fontWeight="250" variant="h4">
