@@ -109,7 +109,7 @@
         "util": "^0.12.4"
     },
     "scripts": {
-        "start": "react-app-rewired --openssl-legacy-provider start",
+        "start": "react-app-rewired start",
         "build": "cross-env GENERATE_SOURCEMAP=false react-app-rewired --openssl-legacy-provider build",
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build",
