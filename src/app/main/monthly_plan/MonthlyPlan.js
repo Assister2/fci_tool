@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import * as XLSX from "xlsx";
 import { saveAs } from "file-saver";
 import UploadIcon from '@mui/icons-material/Upload';
+import { motion } from 'framer-motion';
 // import background1 from "./../../assets/upload1_.png";
 import { useAppDispatch } from "react";
 import {
@@ -19,6 +20,7 @@ import {
   Radio,
   TextField,
   Switch,
+  Paper,
 } from "@mui/material";
 
 function MonthlyPlan() {
@@ -380,8 +382,12 @@ function MonthlyPlan() {
     }
   };
   fetchReservationId_cost();
-
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
   return (
+    <React.Fragment>
     <Card
       sx={{
         p: 0,
@@ -390,7 +396,7 @@ function MonthlyPlan() {
 
 
       <div className="page-container form-group app-container body"
-    
+        
       >
         <div
           className="page-content view-container body"
@@ -398,11 +404,13 @@ function MonthlyPlan() {
             // backgroundImage: "url('/assets/images/fci/bg8.jpg')",
             // backgroundSize: 'cover',
             // backgroundPosition: 'center',
-            padding: 40
+            //padding: 40
+            backgroundColor: "lightgray"
          }}
         >
+          <Paper elevation={3} className="w-full h-full my-6">
           <ul
-            className="x-navigation x-navigation-horizontal x-navigation-panel"
+            className="x-navigation x-navigation-horizontal x-navigation-panel p-16"
             //  style={{ backgroundColor: "rgba(235, 171, 68, 0.69)" }}
           >
             <li className="xn-icon-button body">
@@ -410,6 +418,7 @@ function MonthlyPlan() {
                 <span className="fa fa-dedent" />
               </a>
             </li>
+
             <li
               className="xn-logo body"
               style={{
@@ -419,12 +428,13 @@ function MonthlyPlan() {
                 width: "90%",
               }}
             >
+              
               <Box>
                 <Typography fontWeight="300" variant="h4">
                   Optimized Monthly Plan
                 </Typography>
               </Box>
-              {/* <span style={{ color: "black", fontSize: "32px" }}> */}
+               {/* <span style={{ color: "black", fontSize: "32px" }}> */}
               {/* <Box
                 sx={{
                   // padding: "15px 10px",
@@ -439,40 +449,18 @@ function MonthlyPlan() {
               <a className="x-navigation-control"></a>
             </li>
           </ul>
-          {/* <Box>   
-                 <ul className="breadcrumb">
-            <li>
-              <a href="/home">Home</a>
-            </li>
-            <li className="active">Monthly plan</li>
-          </ul>
-          </Box> */}
-          <Box>
-            {/* <Typography
-              fontWeight="50"
-              variant="h4"
-            > */}
-            {/* <ul className="breadcrumb">
-              <li>
-                <a href="/home">Home</a>
-              </li>
-              <li className="active">Monthly plan</li>
-            </ul> */}
-            {/* </Typography> */}
-          </Box>
+          </Paper>
           <CardContent
             sx={{
-              padding: "30px",
+              padding: "0",
             }}
           >
-
-<hr />
             <div className="page-content-wrap app-container ">
               <div className="row">
                 <div className="col-md-12">
                   <br />
-                  
-                  <div className="row" style={{ marginLeft: "15px" }}>
+                  <Paper elevation={3} className="w-full h-full  my-6">
+                  <div className="row p-16" style={{ marginLeft: "15px" }}>
                     <div style={{ fontSize: "20px", fontWeight: "700" }}>
                       <Box>
                         <Typography fontWeight="250" variant="h4">
@@ -579,9 +567,8 @@ function MonthlyPlan() {
                     </Box>
                     </form>
                   </div>
-                  <br />
-                  <hr />
-                  <br />
+                  </Paper>
+                  
                   <div className=" form-group col-md-12"
                   //  style={{ marginLeft: "15px" }}
                   >
@@ -589,7 +576,8 @@ function MonthlyPlan() {
                     <i className="fa fa-info-circle" aria-hidden="true"></i>{" "}
                     Configurations
                   </div> */}
-                    <Box  style={{marginLeft:25}}>
+                  <Paper elevation={3} className="w-full h-full">
+                    <Box className="p-16" style={{marginLeft:25}}>
                       <Typography fontWeight="250" variant="h4">
                         {/* <i className="fa fa-file-excel-o" aria-hidden="true"></i>{" "} */}
                         Configurations
@@ -600,7 +588,7 @@ function MonthlyPlan() {
                     {/* <form
                   //  style={{ marginLeft: "30px" }}
                   > */}
-                    <Box>
+                    <Box className="p-16">
                       <Box className="inputRow">
                         <div className=" form-group col-md-12">
                           <div className=" col-md-2">
@@ -632,7 +620,6 @@ function MonthlyPlan() {
 
                       <br />
                       {/*   <br /> */}
-<hr />
                       <div className="form-group">
                         <div className="form-group">
                           <Box className="inputRow">
@@ -994,7 +981,7 @@ function MonthlyPlan() {
                     <br /> */}
                       {/* </form> */}
                     </Box>
-
+                    </Paper>
                     {/* <button
                   style={{
                     color: "white",
@@ -1008,8 +995,8 @@ function MonthlyPlan() {
                 >
                   Generate Optimized Plan
                 </button> */}
-                
-                    <div className="form-group">
+                <Paper elevation={3} className="w-full h-full my-6">
+                    <div className="form-group p-16">
                       <Box>
                         <Typography fontWeight="250" variant="h4">
                           {/* <i className="fa fa-file-excel-o" aria-hidden="true"></i>{" "} */}
@@ -1127,26 +1114,26 @@ function MonthlyPlan() {
                     <DynamicTable/>
                   </div> */}
                     <br />
-                    <div className="form-group">
+                    <div className="form-group p-16 flex justify-center">
                       {solutionSolved && (
-                        <div>
+                        <div className="w-full flex justify-center">
                           {/* <p style={{ display: "inline", marginLeft: "80px" }}> */}
                           {/* <strong style={{ fontSize: "16px" }}> */}
-                          <Box className="inputRow" style={{ display: "inline", marginLeft: "80px" }}>
+                          <Box className="inputRow w-full justify-center" style={{ display: "contents", marginLeft: "80px" }}>
                             Optimal Cost of Transportation is INR{" "}
-                            <span style={{ color: "crimson" }}>{cost}</span> Lakhs
+                            <span style={{ textAlign:"center", color: "crimson" }}>{cost}</span> Lakhs
                           </Box>{/* </strong> */}
                           {/* </p> */}
                         </div>
                       )}
                     </div>
                     <br />
-                    <div className="form-group">
+                    <div className="form-group p-16 flex justify-center">
                       {solutionSolved && (
                         <div>
-                          <Box className="inputRow justify-center" style={{ display: "inline", marginLeft: "80px" }}>
+                          <Box className="inputRow w-full justify-center" style={{ display: "inline" }}>
                             <Button
-                              style={{ color: "white", marginLeft: "15px" , backgroundColor: "darkcyan"}}
+                              style={{ color: "white",  backgroundColor: "darkcyan"}}
                               className="btn btn-danger dropdown-toggle"
                               onClick={() => exportToExcel2()}
                             >
@@ -1181,7 +1168,7 @@ function MonthlyPlan() {
                           </button> */}
                           </Box>
                           <br />
-                          <Box className="inputRow justify-center" style={{ display: "inline", marginTop: "60px" , marginLeft: "100px" }}>
+                          <Box className="inputRow w-full flex justify-center" style={{ display: "inline", marginTop: "60px" }}>
                             {/* <button
                               style={{ color: "white", marginLeft: "100px" }}
                               className="btn btn-success dropdown-toggle"
@@ -1220,6 +1207,7 @@ function MonthlyPlan() {
                         </div>
                       )}
                     </div>
+                </Paper>
                     <br />
                     <br />
                     {/* {!solutionSolved && (
@@ -1287,6 +1275,7 @@ function MonthlyPlan() {
               </div>
                 )} */}
                   </div>
+                  
                 </div>
               </div>
 
@@ -1361,6 +1350,7 @@ function MonthlyPlan() {
         </div>
       </div >
     </Card >
+    </React.Fragment>
   );
 }
 
