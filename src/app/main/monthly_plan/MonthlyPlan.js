@@ -405,10 +405,10 @@ function MonthlyPlan() {
             // backgroundSize: 'cover',
             // backgroundPosition: 'center',
             //padding: 40
-            backgroundColor: "#c2ddf9"
+            backgroundColor: "#f1f5f9"
          }}
         >
-          <Paper elevation={3} className="w-full h-full my-6">
+         {/* <Paper elevation={3} className="w-full h-full my-12"> */}
           <ul
             className="x-navigation x-navigation-horizontal x-navigation-panel p-16"
             //  style={{ backgroundColor: "rgba(235, 171, 68, 0.69)" }}
@@ -430,36 +430,26 @@ function MonthlyPlan() {
             >
               
               <Box>
-                <Typography fontWeight="300" variant="h4">
+                <Typography className="text-3xl font-semibold tracking-tight leading-8">
                   Optimized Monthly Plan
                 </Typography>
+                <Typography className="font-medium tracking-tight" color="text.secondary">
+                  Monthly Plan
+                </Typography>
               </Box>
-               {/* <span style={{ color: "black", fontSize: "32px" }}> */}
-              {/* <Box
-                sx={{
-                  // padding: "15px 10px",
-                  fontSize: "32px"
-                }}
-                display="flex"
-                alignItems="center"
-              >
-                Optimized Monthly Plan
-              </Box> */}
-              {/* </span> */}
               <a className="x-navigation-control"></a>
             </li>
           </ul>
-          </Paper>
+          {/* </Paper> */}
           <CardContent
             sx={{
-              padding: "0",
+              padding: "16px",
             }}
           >
             <div className="page-content-wrap app-container ">
               <div className="row">
                 <div className="col-md-12">
-                  <br />
-                  <Paper elevation={3} className="w-full h-full  my-6">
+                  <Paper elevation={3} className="w-full h-full  my-12">
                   <div className="row p-16" style={{ marginLeft: "15px" }}>
                     <div style={{ fontSize: "20px", fontWeight: "700" }}>
                       <Box>
@@ -995,7 +985,7 @@ function MonthlyPlan() {
                 >
                   Generate Optimized Plan
                 </button> */}
-                <Paper elevation={3} className="w-full h-full my-6">
+                <Paper elevation={3} className="w-full h-full my-12">
                     <div className="form-group p-16">
                       <Box>
                         <Typography fontWeight="250" variant="h4">

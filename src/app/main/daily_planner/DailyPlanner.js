@@ -453,18 +453,17 @@ function DailyPlanner() {
       }}
     >
     
-      <div className="page-container">
+      <div className="page-container form-group app-container body">
       
         <div
-          className="page-content"
+          className="page-content view-container body"
           style={{ 
             // backgroundImage: "url('/assets/images/fci/bg8.jpg') ",
             // backgroundSize: 'cover',
             // backgroundPosition: 'center',
-            backgroundColor: "#c2ddf9"
+            backgroundColor: "#f1f5f9"
          }}
         >
-          <Paper elevation={3} className="w-full h-full my-6">
           <ul
             className="x-navigation x-navigation-horizontal x-navigation-panel p-16"
             // style={{ backgroundColor: "rgba(235, 171, 68, 0.69)" }}
@@ -475,7 +474,7 @@ function DailyPlanner() {
               </a>
             </li>
             <li
-              className="xn-logo"
+              className="xn-logo body"
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -487,8 +486,11 @@ function DailyPlanner() {
               Optimized Daily Plan
             </span> */}
               <Box>
-                <Typography fontWeight="300" variant="h4">
+              <Typography className="text-3xl font-semibold tracking-tight leading-8">
                   Optimized Daily Plan
+                </Typography>
+                <Typography className="font-medium tracking-tight" color="text.secondary">
+                  Daily Plan
                 </Typography>
                 
               </Box>
@@ -496,22 +498,15 @@ function DailyPlanner() {
               <a className="x-navigation-control"></a>
             </li>
           </ul>
-          </Paper>
-          {/* <ul className="breadcrumb">
-          <li>
-            <a href="/home">Home</a>
-          </li>
-          <li className="active">Daily plan</li>
-        </ul> */}
         
           <div className="page-content-wrap">
             <div className="row">
               <CardContent
                 sx={{
-                  padding: "10px",
+                  padding: "16px",
                 }}
               >
-                <Paper elevation={3} className="w-full h-full my-6">
+                <Paper elevation={3} className="w-full h-full my-12">
                 <div className=" form-group col-md-12 p-16">
                 <Typography fontWeight="300" variant="h4">
                   Select Scenario.
@@ -536,7 +531,7 @@ function DailyPlanner() {
 
                 <div className="col-md-12">
 
-                  <Paper elevation={3} className="w-full h-full my-6">
+                  <Paper elevation={3} className="w-full h-full my-12">
                   <div className="row p-16" style={{ marginLeft: "15px" }}>
                     {/* <div style={{ fontSize: '20px', fontWeight: '700' }}><i className="fa fa-file-excel-o" aria-hidden="true"></i> Template</div> */}
                     <Box>
@@ -641,7 +636,7 @@ function DailyPlanner() {
                   </Paper>
                   
                   <div>
-                  <Paper elevation={3} className="w-full h-full my-6">  
+                  <Paper elevation={3} className="w-full h-full my-12">  
                     <Box className="p-16">
                       <Typography fontWeight="250" variant="h4">
                         {/* <i className="fa fa-file-excel-o" aria-hidden="true"></i>{" "} */}
@@ -1050,7 +1045,7 @@ function DailyPlanner() {
                       <br />
                     </form>
                   </Paper>
-                  <Paper elevation={3} className="w-full h-full my-6">
+                  <Paper elevation={3} className="w-full h-full my-12">
                     <Box className="p-16">
                       <Typography fontWeight="250" variant="h4">
                         {/* <i className="fa fa-file-excel-o" aria-hidden="true"></i>{" "} */}
