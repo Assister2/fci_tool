@@ -19,6 +19,7 @@ import {
   Button,
   Select,
   Switch,
+  Paper,
 } from "@mui/material";
 
 function DailyPlanner() {
@@ -460,11 +461,12 @@ function DailyPlanner() {
             // backgroundImage: "url('/assets/images/fci/bg8.jpg') ",
             // backgroundSize: 'cover',
             // backgroundPosition: 'center',
-            padding: 40
+            backgroundColor: "#c2ddf9"
          }}
         >
+          <Paper elevation={3} className="w-full h-full my-6">
           <ul
-            className="x-navigation x-navigation-horizontal x-navigation-panel"
+            className="x-navigation x-navigation-horizontal x-navigation-panel p-16"
             // style={{ backgroundColor: "rgba(235, 171, 68, 0.69)" }}
           >
             <li className="xn-icon-button">
@@ -494,7 +496,7 @@ function DailyPlanner() {
               <a className="x-navigation-control"></a>
             </li>
           </ul>
-
+          </Paper>
           {/* <ul className="breadcrumb">
           <li>
             <a href="/home">Home</a>
@@ -502,42 +504,24 @@ function DailyPlanner() {
           <li className="active">Daily plan</li>
         </ul> */}
         
-          <Box>
-            {/* <Typography
-              fontWeight="50"
-              variant="h4"
-            > */}
-            {/* <ul className="breadcrumb">
-              <li>
-                <a href="/home">Home</a>
-              </li>
-              <li className="active">Monthly plan</li>
-            </ul> */}
-            {/* </Typography> */}
-          </Box>
           <div className="page-content-wrap">
             <div className="row">
-              <br />
-              <hr />
               <CardContent
                 sx={{
-                  padding: "30px",
+                  padding: "10px",
                 }}
               >
-
-                {/* <label> */}
-                {/* <strong style={{ fontSize: "20px", marginLeft: "90px", color: "#9d0921" }}> */}
-                {/* <Box className="inputRow"> */}
-                <div className=" form-group col-md-12">
-                  <div className="col-md-2" style={{margin:10}}>
-                    Select Scenario
-                  </div>
+                <Paper elevation={3} className="w-full h-full my-6">
+                <div className=" form-group col-md-12 p-16">
+                <Typography fontWeight="300" variant="h4">
+                  Select Scenario.
+                </Typography>
                   <div className=" col-md-2">
                     {/* </strong> */}
                     <Select
                       value={Scenerio != "" ? Scenerio : "Scenerio 1"}
                       defaultValue="Scenerio 1"
-                      style={{width:200 , margin:15}}
+                      style={{width:200}}
                       onChange={handleSelectChange}
                     //  style={{ marginLeft: "600px" }}
                     >
@@ -545,16 +529,15 @@ function DailyPlanner() {
                       <MenuItem value="Scenerio 2">Scenario 2</MenuItem>
                     </Select>
                   </div>
-                </div><hr/>
-
+                </div>
+                </Paper>
                 {/* </label> */}
                 {/* </Box> */}
-                <br />
 
                 <div className="col-md-12">
 
-                  <br />
-                  <div className="row" style={{ marginLeft: "15px" }}>
+                  <Paper elevation={3} className="w-full h-full my-6">
+                  <div className="row p-16" style={{ marginLeft: "15px" }}>
                     {/* <div style={{ fontSize: '20px', fontWeight: '700' }}><i className="fa fa-file-excel-o" aria-hidden="true"></i> Template</div> */}
                     <Box>
                       <Typography fontWeight="250" variant="h4">
@@ -655,19 +638,18 @@ function DailyPlanner() {
                     {/* </Box>
                     </Box> */}
                   </div>
-                  <br />
-                  <hr />
-                  <br />
-                  <div style={{ marginLeft: "15px" }}>
-                    {/* <div style={{ fontSize: '20px', fontWeight: '700' }}><i className="fa fa-info-circle" aria-hidden="true"></i> Configurations</div> */}
-                    <Box>
+                  </Paper>
+                  
+                  <div>
+                  <Paper elevation={3} className="w-full h-full my-6">  
+                    <Box className="p-16">
                       <Typography fontWeight="250" variant="h4">
                         {/* <i className="fa fa-file-excel-o" aria-hidden="true"></i>{" "} */}
                         Configurations
                       </Typography>
                     </Box>
                     <br />
-                    <form style={{ marginLeft: '50px' }}>
+                    <form className="p-16" style={{ marginLeft: '20px' }}>
                       {/* <label>
                        
                          <Box>
@@ -1067,28 +1049,15 @@ function DailyPlanner() {
                       <br />
                       <br />
                     </form>
-
-                    {/* <button
-                  style={{
-                    color: "white",
-                    backgroundColor: "blue",
-                    fontSize: "20px",
-                    // width: "8%",
-                    marginLeft: "728px",
-                  }}
-                  onClick={handleSolve}
-                  ref={buttonRef}
-                >
-                  Generate Optimized Plan
-                </button> */}
-                    <hr />
-                    <Box>
+                  </Paper>
+                  <Paper elevation={3} className="w-full h-full my-6">
+                    <Box className="p-16">
                       <Typography fontWeight="250" variant="h4">
                         {/* <i className="fa fa-file-excel-o" aria-hidden="true"></i>{" "} */}
                         <i className="fa fa-list-alt" aria-hidden="true"></i> Optimal Plan
                       </Typography>
-                   <br/>
-                    <div className="wrap__toggle" style={{ textAlign: 'center', borderStyle: 'solid', borderColor: '#ebab44b0', marginLeft: '1px' }} onClick={handleSolve}>
+                    </Box>
+                    <div className="wrap__toggle" style={{ textAlign: 'center', borderStyle: 'solid', borderColor: '#ebab44b0' }} onClick={handleSolve}>
                       <div className="wrap__toggle--bluetooth">
                         <span style={{ textAlign: 'center', fontWeight: 'bold' }}>Generate Optimized Plan</span>
                       </div>
@@ -1103,13 +1072,6 @@ function DailyPlanner() {
                       />
                       
                     </div>
-                    </Box>
-                    <br />
-                    {/* <div>
-              <br/>
-                    <DynamicTable/>
-                  </div> */}
-                    <br />
                     {solutionSolved && (
                       <Box className="inputRow justify-center" style={{ display: "inline", marginTop: "60px" , marginLeft: "100px" }}>
                         {scn && (
@@ -1202,8 +1164,8 @@ function DailyPlanner() {
                         </table>
                       </div>
                     )}
+                    </Paper>
                   </div>
-
                 </div> </CardContent>
             </div>
             {/* {solutionSolved && (
