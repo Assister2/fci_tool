@@ -449,7 +449,7 @@ function MonthlyPlan() {
             <div className="page-content-wrap app-container ">
               <div className="row">
                 <div className="col-md-12">
-                  <Paper elevation={3} className="w-full h-full  my-12">
+                  <Paper elevation={3} className="w-full h-full my-12 shadow-sm md:shadow-sm lg:shadow-sm">
                   <div className="row p-16" style={{ marginLeft: "15px" }}>
                     <div style={{ fontSize: "20px", fontWeight: "700" }}>
                       <Box>
@@ -566,7 +566,7 @@ function MonthlyPlan() {
                     <i className="fa fa-info-circle" aria-hidden="true"></i>{" "}
                     Configurations
                   </div> */}
-                  <Paper elevation={3} className="w-full h-full">
+                  <Paper elevation={3} className="w-full h-full my-12 shadow-sm md:shadow-sm lg:shadow-sm">
                     <Box className="p-16" style={{marginLeft:25}}>
                       <Typography fontWeight="250" variant="h4">
                         {/* <i className="fa fa-file-excel-o" aria-hidden="true"></i>{" "} */}
@@ -985,7 +985,7 @@ function MonthlyPlan() {
                 >
                   Generate Optimized Plan
                 </button> */}
-                <Paper elevation={3} className="w-full h-full my-12">
+                <Paper elevation={3} className="w-full h-full my-12 shadow-sm md:shadow-sm lg:shadow-sm">
                     <div className="form-group p-16">
                       <Box>
                         <Typography fontWeight="250" variant="h4">

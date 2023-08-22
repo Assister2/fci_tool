@@ -506,7 +506,7 @@ function DailyPlanner() {
                   padding: "16px",
                 }}
               >
-                <Paper elevation={3} className="w-full h-full my-12">
+                <Paper elevation={3} className="w-full h-full my-12 shadow-sm md:shadow-sm lg:shadow-sm" style={{boxShadow: 0}}>
                 <div className=" form-group col-md-12 p-16">
                 <Typography fontWeight="300" variant="h4">
                   Select Scenario.
@@ -531,7 +531,7 @@ function DailyPlanner() {
 
                 <div className="col-md-12">
 
-                  <Paper elevation={3} className="w-full h-full my-12">
+                  <Paper elevation={3} className="w-full h-full my-12 shadow-sm md:shadow-sm lg:shadow-sm">
                   <div className="row p-16" style={{ marginLeft: "15px" }}>
                     {/* <div style={{ fontSize: '20px', fontWeight: '700' }}><i className="fa fa-file-excel-o" aria-hidden="true"></i> Template</div> */}
                     <Box>
@@ -636,7 +636,7 @@ function DailyPlanner() {
                   </Paper>
                   
                   <div>
-                  <Paper elevation={3} className="w-full h-full my-12">  
+                  <Paper elevation={3} className="w-full h-full my-12 shadow-sm md:shadow-sm lg:shadow-sm">  
                     <Box className="p-16">
                       <Typography fontWeight="250" variant="h4">
                         {/* <i className="fa fa-file-excel-o" aria-hidden="true"></i>{" "} */}
@@ -1045,7 +1045,7 @@ function DailyPlanner() {
                       <br />
                     </form>
                   </Paper>
-                  <Paper elevation={3} className="w-full h-full my-12">
+                  <Paper elevation={3} className="w-full h-full my-12 shadow-sm md:shadow-sm lg:shadow-sm">
                     <Box className="p-16">
                       <Typography fontWeight="250" variant="h4">
                         {/* <i className="fa fa-file-excel-o" aria-hidden="true"></i>{" "} */}
